@@ -1,5 +1,6 @@
 <h1>Listing users</h1>
 
+# @variables defined in the controller are automatically available in the view, ie @users
 <table>
   <thead>
     <tr>
@@ -16,7 +17,7 @@
         <td><%= user.email %></td>
         <td><%= link_to 'Show', user %></td>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', user, method: :delete, data: { confirm: 'Are you really sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
